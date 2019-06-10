@@ -32,7 +32,7 @@ const game = () => {
             const computerNumber = Math.floor(Math.random() * 3);
             const computerChoice = computerOptions[computerNumber];
             // we call compare hands here
-
+            compareHands(this.textContent, computerChoice);
 
             // update images to match pick
             playerHand.src = `./assets/${this.textContent}.png`;
@@ -42,7 +42,7 @@ const game = () => {
     };
 
     // who wins, compare hands
-    const compareHands = (playerChoice, ComputerChoice) => {
+    const compareHands = (playerChoice, computerChoice) => {
         // update text
         const winner = document.querySelector('.winner');
         // checking for a tie game
